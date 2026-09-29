@@ -1,0 +1,30 @@
+{
+  "title": "ANEEL — Solar generation in Brazil",
+  "description": "Distributed and utility-scale solar projects filtered from ANEEL open data, refreshed daily.",
+  "source": "ANEEL Dados Abertos",
+  "source_url": "https://dadosabertos.aneel.gov.br",
+  "databases": {
+    "aneel-solar": {
+      "tables": {
+        "gd_solar": {
+          "title": "Distributed solar — registry",
+          "description": "One row per distributed generation project: location, utility, consumer class, installed power (kW).",
+          "sort_desc": "DthAtualizaCadastralEmpreend",
+          "facets": ["NomMunicipio", "NomAgente", "DscClasseConsumo", "DscSubGrupoTarifario", "DscPorte"]
+        },
+        "gd_solar_technical": {
+          "title": "Distributed solar — technical data",
+          "description": "Modules, inverters, array area and grid connection date for each project.",
+          "sort_desc": "DatConexao",
+          "facets": ["NomFabricanteModulo", "NomFabricanteInversor"]
+        },
+        "siga_solar": {
+          "title": "Utility-scale solar plants (SIGA)",
+          "description": "Centralized solar plants from SIGA, including those under construction.",
+          "sort_desc": "DatEntradaOperacao",
+          "facets": ["DscFaseUsina", "DscTipoOutorga"]
+        }
+      }
+    }
+  }
+}
